@@ -1,0 +1,15 @@
+<launch>
+    <node
+       pkg="beginner_tutorials" 
+        type="adder_server.py" 
+        name="adder_service_server" 
+        output="screen">
+    </node>
+    <node 
+        pkg="beginner_tutorials" 
+        type="adder_client.py" 
+        name="adder_service_client" 
+        output="screen">
+    </node>
+
+</launch>
