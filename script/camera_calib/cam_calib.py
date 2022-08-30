@@ -1,9 +1,10 @@
 #!/usr/bin/env python
+
 import numpy as np
 import cv2
 import time
-cv2.namedWindow("Aruco Marker Detection")
-cv2.moveWindow("Aruco Marker Detection", 0, 0)
+cv2.namedWindow("Camera Calibration")
+cv2.moveWindow("Camera Calibration", 800, 0)
 video_capture = cv2.VideoCapture(0)
 
 video_capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
@@ -18,7 +19,8 @@ while (True):
     ret, frame = video_capture.read()
     frame_count += 1
     if frame_count == 30:
-        cv2.imwrite("cal_image_"+str(cal_image_count)+".jpg", frame)
+        pwd_add = '/home/ammar/catkin_ws/src/ros_basics_pkg/script/camera_calib/'
+        cv2.imwrite(str(pwd_add) + "cal_image_"+str(cal_image_count)+".jpg", frame)
         cal_image_count += 1
         frame_count = 0
     new_frame_time = time.time()
@@ -32,7 +34,7 @@ while (True):
                 (100, 255, 0),
                 2,
                 cv2.LINE_AA)
-    cv2.imshow("Aruco Marker Detection", frame)
+    cv2.imshow("Camera Calibration", frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
