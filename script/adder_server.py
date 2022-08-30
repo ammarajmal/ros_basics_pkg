@@ -1,9 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import rospy
-from ammar_pkg.srv import adder, adderResponse
+from ros_basics_pkg.srv import adder, adderResponse
+
 
 def callback_adder(request):
     return adderResponse(request.a + request.b)
+
 
 def adder_server():
     rospy.init_node('adder_server_node')

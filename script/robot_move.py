@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import math
 import time
 import rospy
@@ -8,11 +8,13 @@ from std_srvs.srv import Empty
 
 x, y, z, yaw = 0, 0, 0, 0
 
+
 def poseCallback(pose_message):
-    global x, y , z, yaw
+    global x, y, z, yaw
     x = pose_message.x
     y = pose_message.y
     yaw = pose_message.theta
+
 
 def move(speed, distance):
     velocity_message = Twist()
@@ -55,6 +57,3 @@ if __name__ == '__main__':
         rospy.spin()
     except rospy.ROSInterruptException:
         rospy.loginfo('node terminated')
-
-
-

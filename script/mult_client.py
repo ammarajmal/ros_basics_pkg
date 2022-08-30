@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import rospy
-from ammar_pkg.srv import multiplier, multiplierResponse 
+from ros_basics_pkg.srv import multiplier
+
 
 def multiplier_client(x, y):
     rospy.init_node('multiplier_client_node')

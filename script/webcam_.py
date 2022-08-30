@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 # *****************
 # example 1
@@ -28,7 +28,7 @@
 # plt.show()
 # cv.imshow('bgr image', img)
 # cv.imshow('rgb image', img2)
-# cv.waitKey(0) & 0XFF 
+# cv.waitKey(0) & 0XFF
 # cv.destroyAllWindows()
 
 
@@ -40,11 +40,12 @@ import numpy as np
 img = cv.imread('my_image2.tif')
 
 # Accessing and Modifying pixel values
-px = img[10, 10];    print(px)
+px = img[10, 10]
+print(px)
 
 # accessing only the blue pixel value
-
-blue = img[10, 10, 0];   print(blue)
+blue = img[10, 10, 0]
+print(blue)
 
 
 # printing the size of the image
@@ -52,15 +53,12 @@ print(img.size)
 
 
 # cv.imshow('bgr image', img)
-# cv.waitKey(0) & 0XFF 
-# cv.destroyAllWindows()
+# cv.waitKey(0) & 0XFF
+# # cv.destroyAllWindows()
 
-
-
-
-# *****************
+# ***********************************
 # example last (webcam video stream)
-# *****************
+# ***********************************
 
 # cap = cv2.VideoCapture(0)
 
@@ -72,5 +70,4 @@ print(img.size)
 #     else:   break
 # cap.release()
 # cv2.destroyAllWindows()
-    
 # Load a color image in grayscale

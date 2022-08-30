@@ -1,8 +1,9 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import sys
 import rospy
-from ammar_pkg.srv import AddTwoInts, AddTwoIntsRequest, AddTwoIntsResponse
+from ros_basics_pkg.srv import AddTwoInts, AddTwoIntsRequest, AddTwoIntsResponse
+
 
 def add_two_ints_client(x, y):
     rospy.wait_for_service('add_two_ints')
@@ -11,10 +12,11 @@ def add_two_ints_client(x, y):
         resp1 = add_two_ints(x, y)
         return resp1
     except rospy.ROSInterruptException as e:
-        print("Service call falied: %s"%e)
+        print("Service call falied: %s" % e)
+
 
 def usage():
-    return '%s [x, y]'%sys.argv[0]
+    return '%s [x, y]' % sys.argv[0]
 
 if __name__ == '__main__':
     if len(sys.argv) == 3:
@@ -23,5 +25,5 @@ if __name__ == '__main__':
     else:
         print(usage())
         sys.exit(1)
-    print('Requesting %s + %s'%(x, y))
-    print('%s + %s = %s'%(x, y, add_two_ints_client(x, y)))
+    print('Requesting %s + %s' % (x, y))
+    print('%s + %s = %s' % (x, y, add_two_ints_client(x, y)))

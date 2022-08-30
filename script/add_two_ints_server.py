@@ -1,10 +1,13 @@
-#!/usr/bin/env python3
-from ammar_pkg.srv import AddTwoInts, AddTwoIntsResponse
+#!/usr/bin/env python
+from ros_basics_pkg.srv import AddTwoInts, AddTwoIntsResponse
 import rospy
+
+
 # i have changed from ubuntu 20.04
 def handle_add_two_ints(req):
-    print('Returning [%s + %s = %s]'%(req.a, req.b , (req.a + req.b)))
+    print('Returning [%s + %s = %s]' % (req.a, req.b, (req.a + req.b)))
     return AddTwoIntsResponse(req.a + req.b)
+
 
 def add_two_ints_server():
     rospy.init_node('add_two_ints_server', anonymous=False)
