@@ -1,0 +1,8 @@
+<launch>
+    <node
+       pkg="ros_basics_pkg" 
+        type="script/camera_calib/cam_calib.py" 
+        name="cam_calib" 
+        output="screen">
+    </node>
+</launch>

@@ -2,14 +2,14 @@
     <node
         name = "my_talker" 
         type = "talker_py.py"
-        pkg =  "ammar_pkg"
+        pkg =  "ros_basics_pkg"
         output = "screen"
         >
     </node>
     <node
         name = "my_listener" 
         type = "listener_py.py"
-        pkg =  "ammar_pkg"
+        pkg =  "ros_basics_pkg"
         output = "screen"
         >
     </node>

@@ -1,12 +1,12 @@
 <launch>
     <node
-       pkg="beginner_tutorials" 
+       pkg="ros_basics_pkg" 
         type="adder_server.py" 
         name="adder_service_server" 
         output="screen">
     </node>
     <node 
-        pkg="beginner_tutorials" 
+        pkg="ros_basics_pkg" 
         type="adder_client.py" 
         name="adder_service_client" 
         output="screen">
