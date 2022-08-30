@@ -1,7 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import rospy
 from std_msgs.msg import String
-from ammar_pkg.msg import Message1
+from ros_basics_pkg.msg import Message1
+
 
 def talker():
     rospy.init_node('talker_node_py', anonymous=True)
@@ -20,4 +21,3 @@ def talker():
         i += 1
 if __name__ == "__main__":
     talker()
-

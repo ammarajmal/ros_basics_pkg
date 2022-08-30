@@ -1,6 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import rospy
-from ammar_pkg.srv import adder, adderResponse
+from ros_basics_pkg.srv import adder
+
+
 def adder_client(x, y):
     rospy.init_node('adder_client_node')
     rospy.wait_for_service('adder')
@@ -9,7 +11,7 @@ def adder_client(x, y):
     while not rospy.is_shutdown():
         try:
             add_two_ints = rospy.ServiceProxy('adder', adder)
-            response = add_two_ints(x,y)
+            response = add_two_ints(x, y)
             rospy.loginfo(response.result)
             rate.sleep()
         except rospy.ServiceException as e:

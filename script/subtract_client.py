@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import rospy
-from ammar_pkg.srv import subtract, subtractResponse
+from ros_basics_pkg.srv import subtract, subtractResponse
+
 
 def subtract_client(x, y):
     rospy.init_node('subtract_client_node')
@@ -18,4 +19,3 @@ def subtract_client(x, y):
 
 if __name__ == '__main__':
     subtract_client(2, 3)
-    

@@ -2,7 +2,7 @@
 #include <opencv2/aruco.hpp>
 #include<iostream>
 #include <time.h>
-
+// Just a simple test commit 
 using namespace cv;
 using namespace std;
 int markNum(0);

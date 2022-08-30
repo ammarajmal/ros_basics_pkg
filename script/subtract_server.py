@@ -1,9 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import rospy
-from ammar_pkg.srv import subtract, subtractResponse
+from ros_basics_pkg.srv import subtract, subtractResponse
+
 
 def callback_subtract(request):
     return subtractResponse(request.b - request.a)
+
 
 def subtract_server():
     rospy.init_node('subtract_server')
