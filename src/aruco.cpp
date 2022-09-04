@@ -1,10 +1,13 @@
 #include "opencv2/opencv.hpp"
 #include <opencv2/aruco.hpp>
+#include<vector>
+
 using namespace cv;
 using namespace std;
 int markNum(1);
 
-Mat markerGenerator(int markNum){
+Mat markerGenerator(int markNum)
+{
     Mat markerImage;
     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
     aruco::drawMarker(dictionary, markNum, 200, markerImage, 1);
@@ -13,11 +16,13 @@ Mat markerGenerator(int markNum){
 }
 
 
-void markderDetector(){
+void markderDetector()
+{
     VideoCapture inputVideo;
     inputVideo.open(4);
     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_4X4_100);
-    while (inputVideo.grab()) {
+    while (inputVideo.grab())
+    {
     Mat image, imageCopy;
     inputVideo.retrieve(image);
     image.copyTo(imageCopy);
