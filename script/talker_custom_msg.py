@@ -11,7 +11,7 @@ def talker():
     i = 0
     while not rospy.is_shutdown():
         msg = Message1()
-        msg.name = 'Ammar'
+        msg.identity = 'Ammar'
         msg.id = 4
         msg.temp = 10.93
 
