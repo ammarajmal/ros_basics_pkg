@@ -123,8 +123,18 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
-  ${OpenCV_INCLUDE_DIRS}
+  ${OpenCv_INCLUDE_DIRS}
 )
+
+
+#talker
+add_executable(talker_ros_basic_pkg src/talker.cpp)
+target_link_libraries (talker_ros_basic_pkg ${catkin_LIBRARIES})
+
+#listener
+add_executable(listener_ros_basic_pkg src/listener.cpp)
+target_link_libraries (listener_ros_basic_pkg ${catkin_LIBRARIES})
+
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

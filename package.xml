@@ -5,7 +5,11 @@
   <description>The ros_basics_pkg package</description>
   <maintainer email="ammarajml@gmail.com">ammar</maintainer>
   <license>TODO</license>
+<<<<<<< HEAD
   <author email="ammarajml@gmail.com">Ammar Ajmal</author> -->
+=======
+  <author email="ammarajml@gmail.com">Ammar Ajmal</author>
+>>>>>>> 2a9f60776ff3ba105c3ff219546611b9fdf79dc6
 
   <buildtool_depend>catkin</buildtool_depend>
 
