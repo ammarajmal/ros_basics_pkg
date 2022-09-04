@@ -10,6 +10,7 @@ def talker():
     i = 0
     while not rospy.is_shutdown():
         str_msg = 'hello from talker (pub) : ' + str(i)
+        rospy.loginfo(str_msg)
         pub.publish(str_msg)
         i += 1
         rate.sleep()

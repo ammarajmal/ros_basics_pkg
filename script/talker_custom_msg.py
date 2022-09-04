@@ -11,9 +11,9 @@ def talker():
     i = 0
     while not rospy.is_shutdown():
         msg = Message1()
-        msg.message = 'Position: '
-        msg.x = 2.2
-        msg.y = 4.5
+        msg.name = 'Ammar'
+        msg.id = 4
+        msg.temp = 10.93
 
         pub.publish(msg)
         rospy.loginfo(msg)

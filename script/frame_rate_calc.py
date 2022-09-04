@@ -10,7 +10,7 @@ cap = cv.VideoCapture(0)
 
 cap.set(cv.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv.CAP_PROP_FRAME_HEIGHT, 480)
-cap.set(cv.CAP_PROP_FPS, 40)
+cap.set(cv.CAP_PROP_FPS, 60)
 
 prev_frame_time = time.time()
 

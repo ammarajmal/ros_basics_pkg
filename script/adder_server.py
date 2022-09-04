@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from ros_basics_pkg.srv import adder, adderResponse
+from ros_basics_pkg.srv import Adder, AdderResponse
 # from ros_basics_pkg.srv import Adder, AdderResponse
 
 

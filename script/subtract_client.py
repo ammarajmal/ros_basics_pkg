@@ -18,4 +18,4 @@ def subtract_client(x, y):
             print('Service call failed %', e)
 
 if __name__ == '__main__':
-    subtract_client(2, 3)
+    subtract_client(3, 2)

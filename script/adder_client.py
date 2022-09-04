@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from ros_basics_pkg.srv import Adder
+from ros_basics_pkg.srv import Adder, AdderResponse
 
 
 def adder_client(x, y):
