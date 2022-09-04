@@ -29,7 +29,6 @@ void markderDetector()
     vector<int> ids;
     vector<vector<Point2f> > corners;
     aruco::detectMarkers(image, dictionary, corners, ids);
-    
     // if at least one marker detected
     if (ids.size() > 0)
             aruco::drawDetectedMarkers(imageCopy, corners, ids);

@@ -2,7 +2,7 @@
 
 import sys
 import rospy
-from ros_basics_pkg.srv import AddTwoInts, AddTwoIntsRequest, AddTwoIntsResponse
+from ros_basics_pkg.srv import AddTwoInts
 
 
 def add_two_ints_client(x, y):

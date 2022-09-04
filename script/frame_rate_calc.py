@@ -20,7 +20,7 @@ while True:
     fps = 1/(new_frame_time - prev_frame_time)
     prev_frame_time = new_frame_time
     cv.putText(frame,
-                "FPS:" + str(int(fps)), 
+               "FPS:" + str(int(fps)),
                 (10, 40),
                 cv.FONT_HERSHEY_PLAIN,
                 2,

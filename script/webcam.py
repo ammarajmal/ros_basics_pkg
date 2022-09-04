@@ -28,7 +28,7 @@
 # plt.show()
 # cv.imshow('bgr image', img)
 # cv.imshow('rgb image', img2)
-# cv.waitKey(0) & 0XFF 
+# cv.waitKey(0) & 0XFF
 # cv.destroyAllWindows()
 
 
@@ -52,11 +52,8 @@
 
 
 # cv.imshow('bgr image', img)
-# cv.waitKey(0) & 0XFF 
+# cv.waitKey(0) & 0XFF
 # cv.destroyAllWindows()
-
-
-
 
 # *****************
 # example last (webcam video stream)
@@ -66,11 +63,11 @@ cap = cv2.VideoCapture(0)
 
 while (cap.isOpened()):
     ret, frame = cap.read()
-    if ret == True:
+    if ret is True:
         cv2.imshow('Frame', frame)
-        if cv2.waitKey(25) & 0xFF == ord('q'):  break
-    else:   break
+        if cv2.waitKey(25) & 0xFF == ord('q'):
+            break
+    else:
+        break
 cap.release()
 cv2.destroyAllWindows()
-    
-# Load a color image in grayscale

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from ros_basics_pkg.srv import adder
+from ros_basics_pkg.srv import Adder
 
 
 def adder_client(x, y):
@@ -10,7 +10,7 @@ def adder_client(x, y):
 
     while not rospy.is_shutdown():
         try:
-            add_two_ints = rospy.ServiceProxy('adder', adder)
+            add_two_ints = rospy.ServiceProxy('adder', Adder)
             response = add_two_ints(x, y)
             rospy.loginfo(response.result)
             rate.sleep()

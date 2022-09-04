@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "ammar_pkg/Multiplier.h"
+#include "ros_basics_pkg/Multiplier.h"
 #include <cstdlib>
 int main(int argc, char **argv){
     ros::init(argc, argv, "multiply_client_cpp");

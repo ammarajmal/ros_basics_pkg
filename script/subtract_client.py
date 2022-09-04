@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from ros_basics_pkg.srv import subtract, subtractResponse
+from ros_basics_pkg.srv import Subtract
 
 
 def subtract_client(x, y):
@@ -10,7 +10,7 @@ def subtract_client(x, y):
 
     while not rospy.is_shutdown():
         try:
-            sub_two = rospy.ServiceProxy('subtract', subtract)
+            sub_two = rospy.ServiceProxy('subtract', Subtract)
             response = sub_two(x, y)
             rospy.loginfo(response.result)
             rate.sleep()

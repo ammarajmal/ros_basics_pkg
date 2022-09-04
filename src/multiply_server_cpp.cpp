@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "ammar_pkg/Multiplier.h"
+#include "ros_basics_pkg/Multiplier.h"
 bool multiply(ammar_pkg::Multiplier::Request &req, ammar_pkg::Multiplier::Response &res) {
                 res.result = req.a * req.b;
                 ROS_INFO("request: x=%ld, y = %ld", (long int)req.a, (long int)req.b);

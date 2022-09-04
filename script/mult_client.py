@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from ros_basics_pkg.srv import multiplier
+from ros_basics_pkg.srv import Multiplier
 
 
 def multiplier_client(x, y):
@@ -10,7 +10,7 @@ def multiplier_client(x, y):
 
     while not rospy.is_shutdown():
         try:
-            multiply_two_ints = rospy.ServiceProxy('multiplier', multiplier)
+            multiply_two_ints = rospy.ServiceProxy('multiplier', Multiplier)
             response = multiply_two_ints(x, y)
             rospy.loginfo(response.result)
             rate.sleep()

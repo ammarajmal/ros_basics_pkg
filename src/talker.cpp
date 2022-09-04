@@ -7,7 +7,7 @@ int main(int argc, char **argv)
 	// Initiate new ROS node named "talker"
 	ros::init(argc, argv, "talker_node");
 
-	//create a node handle: it is reference assigned to a new node
+    // create a node handle: it is reference assigned to a new node
 	ros::NodeHandle n;
 	//create a publisher with a topic "chatter" that will send a String message
 	ros::Publisher chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
