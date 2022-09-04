@@ -220,3 +220,10 @@ target_link_libraries (listener_ros_basic_pkg ${catkin_LIBRARIES})
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+
+find_package(OpenCV)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(aruco_exe src/aruco.cpp)
+target_link_libraries(aruco_exe ${catkin_LIBRARIES})
+target_link_libraries(aruco_exe ${OpenCV_LIBRARIES})
